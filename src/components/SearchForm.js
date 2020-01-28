@@ -1,10 +1,8 @@
   import React, { useState } from "react";
-  import ReactDOM from "react-dom";
+  import ReactDOM from "react-dom";""
+  import CharacterList from "./CharacterList"
   
-  function people() {
-
-    
-    }
+  const people = [< CharacterList />];
  
   function SearchForm() {
     const [searchTerm, setSearchTerm] = React.useState("");

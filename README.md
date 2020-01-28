@@ -29,6 +29,8 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 > Answer:
 
+Client side routing is more efficent than traditional Server-side routing. Client side routing allows web pages to be fully loaded on the inital request which makes transitions between pages and animations quicker which results in a more user-friendly experience. Traditionally server-side routing has been used on many web apps. Server side routing only loads what is needed on a request so when a user changes pages or clicks a link the request has to be sent to the server and then back to the user. This re-rendering often includes unnecessary or redundant information which slows down load times and ultimately impacts UX.
+
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
