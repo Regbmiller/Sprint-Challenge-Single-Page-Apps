@@ -11,7 +11,7 @@ const StyledDiv = styled.div
 `display: flex;
  flex-direction: column;
  align-items: center;
- background: teal;
+ background: #DA8D7D;
  border: solid 10px black
  font-family: cursive;`  
 
