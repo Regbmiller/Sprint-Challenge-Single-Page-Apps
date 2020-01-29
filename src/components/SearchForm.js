@@ -1,10 +1,9 @@
   import React, { useState } from "react";
-  import ReactDOM from "react-dom";""
+  // npm startimport ReactDOM from "react-dom";""
   import CharacterList from "./CharacterList"
   
-  const people = [< CharacterList />];
  
-  function SearchForm() {
+  function SearchForm({ CharacterList }) {
     const [searchTerm, setSearchTerm] = React.useState("");
     const [searchResults, setSearchResults] = React.useState([]);
     const handleChange = event => {
@@ -12,8 +11,8 @@
   };
 
   React.useEffect(() => {
-    const results = people.filter(person =>
-      person.toLowerCase().includes(searchTerm)
+    const results = searchResults.filter(SearchForm =>
+      searchResults.toLowerCase().includes(searchTerm)
     );
     setSearchResults(results);
   }, [searchTerm]);

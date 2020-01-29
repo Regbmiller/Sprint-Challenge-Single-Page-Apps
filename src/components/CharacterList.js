@@ -15,6 +15,7 @@ export default function CharacterList() {
       console.log(res.data.results);
       setCharacter(res.data.results);
       setFiltered(res.data.results);
+      
     })
     .catch((err) => {
       console.error(err);
@@ -33,7 +34,7 @@ export default function CharacterList() {
 
   return (
     <section className="character-list">
-      <SearchForm filter={filter} />
+      <SearchForm filtered={filtered} />
        {filtered.map((character) => (
         <h1><CharacterCard character={character}/></h1> 
          )
