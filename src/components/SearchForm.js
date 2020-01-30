@@ -1,41 +1,44 @@
-  import React, { useState } from "react";
-  // npm startimport ReactDOM from "react-dom";""
-  import CharacterList from "./CharacterList"
-  
+import React, { useState, useEffect} from "react";
  
-  function SearchForm({ CharacterList }) {
+ 
+  function SearchForm( props ) {
     const [searchTerm, setSearchTerm] = React.useState("");
-    const [searchResults, setSearchResults] = React.useState([]);
+    
+    console.log("filtered #1", props);
+    
     const handleChange = event => {
     setSearchTerm(event.target.value);
   };
 
-  React.useEffect(() => {
-    const results = searchResults.filter(SearchForm =>
-      searchResults.toLowerCase().includes(searchTerm)
+  
+  const submitHandle = e => {
+    e.preventDefault();
+    let results = props.filtered.filter(character =>
+      character.name.toLowerCase().includes(searchTerm)
     );
-    setSearchResults(results);
-  }, [searchTerm]);
+    props.result(results);
+    console.log("filtered #2", results);
+    };
 
     return (
   
         <section className="search-form">
-        <form>
-         <label>Search Name:</label>
-         <input 
+        <form onSubmit={submitHandle}>
+         <label htmlFor="search">Search Name:</label>
+         <input
+          id="name"
+          name="search" 
           type="text" 
           placeholder="Search" 
           value={searchTerm}
           onChange={handleChange}
         />     
-        <ul>
-          {searchResults.map(item => (
-            <li>{item}</li>
-            ))}
-        </ul>   
+        <button type="submit">Search</button>
         </form> 
        </section>
      );
     }
     
   export default SearchForm
+
+

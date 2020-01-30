@@ -40,7 +40,7 @@ return (
     <StyledDiv> 
       <StyledHeader> 
         <Header />
-        <SearchForm/>
+       
       </StyledHeader>
       <StyledButton>
         <Link to="/">Welcome</Link>
